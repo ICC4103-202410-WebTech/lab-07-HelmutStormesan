@@ -1,5 +1,6 @@
 class AddTablePosts < ActiveRecord::Migration[7.1]
   def change
+    belongs_to :user
     create_table :posts do |t|
       t.string :title, null: false
       t.text :content, null: false
